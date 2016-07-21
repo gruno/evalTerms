@@ -1,5 +1,5 @@
 # evalTerms
-This tiny helper try to help by simplify the arg eval process of a function.
+This tiny helper try to help simplify the arg eval process of a function.
 Intended for prototypes where readability is trump.
 
 ## API
@@ -46,13 +46,6 @@ what is going on?
       }
     }
 
-    // ... the reality provide much more complexity than this, much more dynamic ... things like:
-    //   (double) negation
-    //   || or and &&
-    //   default values
-    //   1-3, x or n args
-    //   ...
-
     // with help, it could look something like the follwing ...
     var demoFun = function(argOne, argTwo) {
       let argLen = arguments.length;
@@ -86,3 +79,10 @@ what is going on?
         argLen == 2 ? typeof argTwo == 'string' && (argTwo == 'A' || argTwo == 'B'): true
       ], [ ,'wrong type of arg one', ], invalid use of ...);
     }
+
+    // ... the reality provide much more complexity than this, much more dynamic ... things like:
+    //   (double) negation
+    //   || or and &&
+    //   default values
+    //   1-x or n args
+    //   ...
