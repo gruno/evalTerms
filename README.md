@@ -1,5 +1,21 @@
 # evalTerms
 This tiny lib try to help me by simplify the arg eval process of an function.
+Use it for prototypes where readability is trump.
+
+## API
+One function with three faces <br>
+
+    evalTerms(bools, msg)
+    evalTerms(bools, msgs)
+    evalTerms(bools, holeyMsgs, defaultMsg)
+
+- the first arg is always an array that hold **booleans**
+- evalTerms will parse **bools**
+  - if `bools[x] !== 'boolean'` evalTerms will throw
+  - if `bools[x] === false` evalTerms will throw an use ...
+    - **msg** as error message
+    - **msgs[x]** as error message
+      - if **msgs[x]** is undefined evalTerms will use **defaultMsg**
 
 ## Demo
     // suppose an func with an specific signature
