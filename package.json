@@ -1,0 +1,29 @@
+{
+  "name": "evalterms",
+  "version": "0.0.0",
+  "description": "javascript function arg evaluation in a more readable fashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gruno/evalTerms.git"
+  },
+  "keywords": [
+    "helper",
+    "eval",
+    "args",
+    "params"
+  ],
+  "author": "Oliver Gruetzner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gruno/evalTerms/issues"
+  },
+  "homepage": "https://github.com/gruno/evalTerms#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
