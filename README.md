@@ -3,26 +3,15 @@ This tiny helper try to help simplify the arg eval process of a function.
 Intended for prototypes where readability is trump.
 
 ## API
-One function with three faces
-
     evalTerms(bools, msg)
-    evalTerms(bools, msgs)
-    evalTerms(bools, msgs, defaultMsg)
 
-- 1st arg - **bools** - is always an array that hold **booleans**
-- 2nd arg - **msg** - is an string
-- 2nd arg - **msgs** - is an array of strings and maybe an holey array
-- 3rd arg - **defaultMsg** - is an string (used if msgs is an holey array)
-
+- **bools** - an array that should hold **booleans**
+- **msg** - an string
 
 what is going on?
 - evalTerms will parse (loop and switch) **bools**
   - if `bools[x] !== 'boolean'` evalTerms will throw an own Error
-  - if `bools[x] === false` evalTerms will throw an use ...
-    - **msg** as error message
-    - **msgs[x]** as error message or
-      - if `msgs[x] === undefined` use **defaultMsg** as error message
-- evalTerms itself is a notorious ??? and will throw on misuse
+  - if `bools[x] === false` evalTerms will throw an use **msg** as error message
 
 ## Demo
     // suppose an func with an specific signature
@@ -54,30 +43,6 @@ what is going on?
         typeof argOne == 'string',
         argLen == 2 ? typeof argTwo == 'string' && (argTwo == 'A' || argTwo == 'B'): true
       ], 'invalid use of ...');
-    }
-
-    // or
-    var demoFun = function(argOne, argTwo) {
-      let argLen = arguments.length;
-      evalTerms([
-        argLen == 1 || argLen == 2,
-        typeof argOne == 'string',
-        argLen == 2 ? typeof argTwo == 'string' && (argTwo == 'A' || argTwo == 'B'): true
-      ], [
-        'invalid use of ...',
-        'wrong type of arg one',
-        'invalid type or value of optional arg two'
-      ]);
-    }
-
-    // or
-    var demoFun = function(argOne, argTwo) {
-      let argLen = arguments.length;
-      evalTerms([
-        argLen == 1 || argLen == 2,
-        typeof argOne == 'string',
-        argLen == 2 ? typeof argTwo == 'string' && (argTwo == 'A' || argTwo == 'B'): true
-      ], [ ,'wrong type of arg one', ], invalid use of ...);
     }
 
     // ... the reality provide much more complexity than this, much more dynamic ... things like:
