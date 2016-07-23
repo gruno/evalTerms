@@ -8,7 +8,7 @@ Intended for prototypes where readability is trump.
 - evalTerms will parse (loop and switch) **bools**
   - `bools[x] !== true || false` &#187; evalTerms will throw an own Error
   - `bools[x] === false` &#187; evalTerms will throw an use **msg** as error message
-  - `bools[x] === true` &#187; everthing is ok
+  - `bools[x] === true` &#187; ok
 
 ## Demo
     // suppose an func with an specific signature
