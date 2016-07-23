@@ -47,8 +47,12 @@ Intended for prototypes where readability is trump.
 the influence of evalTerms() is subtle ... <br>
 ... an realistic argument eval process provides much more complexity than the example above, <br>
 much more dynamic ... things like:
+
 -  (double) negation
 -  || or and &&
 -  default values
 -  1-x or n args
 -  ...
+
+... how *strong* your test must be ... is up to you and your needs ... <br>
+javascript provides flexibility and dynamic ...
