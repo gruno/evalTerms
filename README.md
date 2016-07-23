@@ -3,7 +3,7 @@ This tiny helper try to help simplify the arg eval process of a function.
 Intended for prototypes where readability is trump.
 
 ## API
-**evalTerms(bools, msg)** &#8212; *evalTerms([], string)*
+**evalTerms(bools, msg)** &#8212; *evalTerms(array, string)*
 
 - evalTerms will parse (loop and switch) **bools**
   - `bools[x] !== true || false` &#187; evalTerms will throw an own Error
