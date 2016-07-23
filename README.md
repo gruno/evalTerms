@@ -3,13 +3,12 @@ This tiny helper try to help simplify the arg eval process of a function.
 Intended for prototypes where readability is trump.
 
 ## API
-    evalTerms(bools, msg)
+**evalTerms(bools, msg)** *evalTerms([bools], string)*
 
-- **bools** - an array that should hold **booleans**
-- **msg** - an string
 - evalTerms will parse (loop and switch) **bools**
-  - if `bools[x] !== 'boolean'` evalTerms will throw an own Error
-  - if `bools[x] === false` evalTerms will throw an use **msg** as error message
+  - if `bools[x] !== 'boolean'` &#187; evalTerms will throw an own Error
+  - if `bools[x] === false` &#187; evalTerms will throw an use **msg** as error message
+  - if `bools[x] === true` &#187; everthing is ok
 
 ## Demo
     // suppose an func with an specific signature
